@@ -1,4 +1,5 @@
 .header__logo {
+  object-fit: contain;
   width: 100px;
   margin-top: 18px;
   margin-left: 20px;
@@ -13,6 +14,7 @@
 
 .header__search {
   display: flex;
+  flex: 1;
 }
 
 .header__searchInput {

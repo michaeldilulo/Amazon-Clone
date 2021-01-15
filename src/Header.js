@@ -14,6 +14,16 @@ function Header() {
             <input type="text" className="header__searchInput" />
             <SearchIcon className="header__searchIcon" />
             </div>
+
+            <div className="header__nav">
+                <Link className="header__link">
+                    <div className="header__option">
+                    <span>Hello,</span>
+                    <span>Sign In</span>
+                    </div>
+                </Link>
+            </div>
+
         </nav>
     )
 }
