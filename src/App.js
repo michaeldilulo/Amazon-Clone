@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"
 function App() {
   return (
     <Router>
-    <div className="app">
+      <div className="app">
         <Switch>
           <Route path="/checkout">
           <h1>Checkout</h1>

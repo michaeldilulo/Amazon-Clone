@@ -3,9 +3,9 @@ import "./Header.css"
 
 function Header() {
     return (
-        <div className="header">
-            
-        </div>
+        <nav className="header__logo">
+            <img src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" />
+        </nav>
     )
 }
 
