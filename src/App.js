@@ -1,4 +1,5 @@
 import './App.css';
+import Header from "./Header"
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"
 
 function App() {
@@ -9,10 +10,11 @@ function App() {
           <Route path="/checkout">
           <h1>Checkout</h1>
           </Route>
-          <Router path="/login">
+          <Route path="/login">
           <h1>Login</h1>
-          </Router>
+          </Route>
           <Route path="/">
+            <Header />
             <h1>Home Page</h1>
           </Route>
      </Switch>
