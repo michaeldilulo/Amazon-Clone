@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Product.css"
+import StarIcon from "@material-ui/icons/Star"
 
 function Product({id, title, price, rating, image}) {
     return (
@@ -9,6 +10,15 @@ function Product({id, title, price, rating, image}) {
                 <small>$</small>
                 <strong>{price}</strong>
             </p>
+            <div className="product__rating">
+                {
+                    Array(rating)
+                        .fill()
+                        .map((_) => (
+                            <p><StarIcon /></p>
+                        ))
+                }
+            </div>
         </div>
     )
 }
