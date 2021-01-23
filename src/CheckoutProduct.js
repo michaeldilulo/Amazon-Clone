@@ -5,7 +5,7 @@ import StarIcon from "@material-ui/icons/Star"
 function CheckoutProduct({id, title, price, rating, image}) {
     return (
         <div className="checkoutProduct">
-            <img src={image} alt="" />
+            <img className="checkoutProduct__image" src={image} alt="" />
 
             <div className="checkoutProduct__info">
                 <p className="checkoutProduct__title">{title}</p>
