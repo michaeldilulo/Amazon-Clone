@@ -5,6 +5,7 @@ import { auth } from "./firebase"
 
 function Login() {
 
+    const history = useHistory();
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -12,7 +13,7 @@ function Login() {
         e.preventDefault();
         auth.siginInWithEmailAndPassword(email, password)
             .then((auth) => {
-            
+            history.push('/')
             })
         .catch(e => alert(e.message))
     }
@@ -21,7 +22,7 @@ function Login() {
         e.preventDefault();
         auth.createUserWithEmailAndPassword(email, password)
             .then(auth => {
-            
+            history.push('/')
             })
         .catch(e => alert(e.message))
     }
