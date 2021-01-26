@@ -16,10 +16,10 @@ function Login() {
                     <input type="text" />
                     <h5>Password</h5>
                     <input type="text" />
-                    <button>Sign in</button>
+                    <button className="login__signInButton">Sign in</button>
                 </form>
                 <p>By signing-in you aree to Amazon's conditions of Use and Sale. Please see our Privacy Notice, our Cookies Notice and our interest-Based Ads Notice.</p>
-                <button>Create your Amazon Account</button>
+                <button className="login__registerButton">Create your Amazon Account</button>
             </div>
         </div>
     )
