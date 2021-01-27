@@ -1,3 +1,4 @@
+ import React, {useEffect} from "react"
 import './App.css';
 import Header from "./Header"
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"
@@ -19,7 +20,10 @@ function App() {
           user: authUser
         })
       } else {
-
+        dispatch({
+          type: 'SET_USER', 
+          user: null
+        })
       }
     })
   }, [])
