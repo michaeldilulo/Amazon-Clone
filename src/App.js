@@ -13,7 +13,11 @@ function App() {
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
-        
+        dispatch({
+          type: 'SET_USER',
+          // if present set to the user object
+          user: authUser
+        })
       } else {
 
       }
