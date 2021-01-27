@@ -12,11 +12,10 @@ function App() {
   const [{ basket }, dispatch] = useStateValue();
 
   useEffect(() => {
-    auth.onAuthStateChanged((authUser) => {
+    const unsubscribe = auth.onAuthStateChanged((authUser) => {
       if (authUser) {
         dispatch({
           type: 'SET_USER',
-          // if present set to the user object
           user: authUser
         })
       } else {
@@ -26,6 +25,12 @@ function App() {
         })
       }
     })
+
+    return () => {
+      // any cleanup operations go in here...
+      unsubscribe();
+    }
+
   }, [])
 
   return (
